@@ -15,17 +15,27 @@
         },
         async mounted() {
             let mesh = new SimplePeerMesh();
-            mesh.printDebug = false;
+            mesh.printDebug = true;
             await mesh.connect("http://localhost:5858");
             await mesh.join('default');
 
-            mesh.on('connect', id => console.log("Connect", id));
-            mesh.on('disconnect', id => console.log("Disconnect", id));
-            mesh.on('error', e => console.log("Error", e));
+            mesh.on('connect', id => console.log('Connect', id));
+            mesh.on('disconnect', id => console.log('Disconnect', id));
+            mesh.on('error', (id, err) => console.log('Error', err));
 
-            mesh.on('data', data => console.log(data.toString()));
-            mesh.on('stream', stream => console.log({stream}));
-            mesh.on('track', track => console.log({track}));
+            mesh.on('data', (id, data) => console.log(data.toString()));
+            mesh.on('stream', (id, stream) => {
+                console.log({stream, id});
+                let vid = document.createElement('video');
+                vid.setAttribute('autoplay', '');
+                vid.setAttribute('controls', '');
+                vid.volume = 0;
+                document.body.appendChild(vid);
+                setTimeout(() => {
+                    vid.srcObject = stream;
+                }, 100);
+            });
+            mesh.on('track', (id, track) => console.log({track}));
 
             mesh.broadcast("HELLO");
 
@@ -42,6 +52,10 @@
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
+    }
+
+    video{
+        max-width:600px;
     }
 
     #outgoing {
