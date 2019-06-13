@@ -1,4 +1,5 @@
 # SimplePeerMesh
+This is a basic project that uses SimplePeerMesh.js to communicate peer to peer with multiple connections. A more advanced project that uses SimplePeerMesh.js can be found here: https://github.com/RuurdBijlsma/p2p-screen-share
 
 ## Project setup
 ```
@@ -13,11 +14,6 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
-```
-
-### Run your tests
-```
-npm run test
 ```
 
 ### Lints and fixes files
