@@ -16,7 +16,7 @@
         async mounted() {
             let mesh = new SimplePeerMesh();
             mesh.printDebug = true;
-            await mesh.connect("http://localhost:5858");
+            await mesh.connect("http://localhost:3000");
             await mesh.join('default');
 
             mesh.on('connect', id => console.log('Connect', id));
