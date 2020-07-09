@@ -9,7 +9,7 @@ export default class MultiPeerMesh extends EventEmitter {
         this.appName = appName;
         this.trickle = trickle;
         this.peers = {};
-        this.printDebug = true;
+        this.printDebug = false;
         this.room = '';
         this.broadcastedStream = null;
 
