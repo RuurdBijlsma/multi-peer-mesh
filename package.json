@@ -1,29 +1,16 @@
 {
-  "name": "simple-peer-mesh",
-  "version": "0.1.0",
-  "private": true,
+  "name": "multi-peer-mesh",
+  "version": "1.0.0",
+  "description": "Mesh structure for peer to peer communication",
+  "main": "src/MultiPeerMesh.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "Ruurd Bijlsma",
+  "license": "ISC",
   "dependencies": {
-    "core-js": "^2.6.5",
-    "register-service-worker": "^1.6.2",
-    "signalhub": "^4.9.0",
-    "simple-peer": "latest",
-    "vue": "^2.6.10",
-    "webrtc-swarm": "^2.9.0",
-    "socket.io-client": "latest"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.8.0",
-    "@vue/cli-plugin-eslint": "^3.8.0",
-    "@vue/cli-plugin-pwa": "^3.8.0",
-    "@vue/cli-service": "^3.8.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "multi-signal-server": "git+https://git@github.com/ruurdbijlsma/multi-signal-server.git",
+    "simple-peer": "^9.7.2"
   }
 }

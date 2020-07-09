@@ -1,25 +1,11 @@
-# SimplePeerMesh
-This is a basic project that uses SimplePeerMesh.js to communicate peer to peer with multiple connections. A more advanced project that uses SimplePeerMesh.js can be found here: https://github.com/RuurdBijlsma/p2p-screen-share
+# multi-peer
+Browser package for mesh structure for WebRTC peer to peer connections
 
-## Project setup
+Works in connection with multi-signal-server (https://github.com/ruurdbijlsma/multi-signal-server)
+### npm install
 ```
-npm install
+npm i --save git+https://git@github.com/ruurdbijlsma/multi-peer-mesh.git
 ```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Used in
+* Scribble: https://github.com/ruurdbijlsma/scribble
+* Peercord: https://github.com/ruurdbijlsma/Peercord
