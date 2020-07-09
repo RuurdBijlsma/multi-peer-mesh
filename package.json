@@ -1,6 +1,6 @@
 {
   "name": "multi-peer-mesh",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mesh structure for peer to peer communication",
   "main": "src/MultiPeerMesh.js",
   "scripts": {
