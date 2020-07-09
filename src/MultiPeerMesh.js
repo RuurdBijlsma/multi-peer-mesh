@@ -205,13 +205,13 @@ export default class MultiPeerMesh extends EventEmitter {
     }
 
     checkFullConnect() {
+        if (this.isFullyConnected())
+            this.emit('full-connect');
+    }
+
+    isFullyConnected() {
         let peerCount = this.getConnectedPeerCount();
-        console.log(peerCount)
-        // +1 is me :)
-        if (peerCount + 1 >= this.signal.roomCount) {
-            this.log('Fully connected to room, peer count: ', peerCount, 'room count: ', this.signal.roomCount);
-            this.emit('full-connect')
-        }
+        return peerCount + 1 >= this.signal.roomCount;
     }
 
     destroy() {
